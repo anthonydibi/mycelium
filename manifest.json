@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Campfyre",
+    "version": "1.0",
+    "description": "An extension which connects you with other people who are looking at the same content on the web.",
+    "icons": {
+        "16" : "images/campfire-16.png",
+        "32" : "images/campfire-32.png",
+        "64" : "images/campfire-64.png",
+        "128" : "images/campfire-128.png"
+    },
+    "content-scripts": [
+        {
+            "js": ["scripts/serverListener.js"],
+            "matches": "*",
+            "exclude_matches": [
+                "https://www.google.com/*",
+                "https://www.linkedin.com/*",
+                "https://www.twitter.com/*",
+                "https://www.facebook.com/*"
+                "https://www.yahoo.com/*",
+                "https://www.bing.com/*"
+            ]
+        }
+    ]
+  }
