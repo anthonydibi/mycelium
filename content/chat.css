@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    padding-top: 35px;
+}
+
+h2{
+    margin: 0;
+}
+
+.mycelium-exit-button{
+    width: 20px;
+    height: 20px;
+}
+
+#mycelium-toolbar{
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    height: 35px;
+    min-width: 100%;
+    background-color: black;
+    color: white;
+}
+
+#mycelium-messages{
+    display: flex;
+    flex-direction: column;
+}
+
+.msg-container:after {
+    width: 100%;
+    content: " "; 
+    display: block;
+    clear: both;
+}
+
+.msg{
+    padding: 15px;
+    width: fit-content;
+    max-width: 60%;
+    height: fit-content;
+    margin: 2px;
+    border-radius: 15px;
+    color: white;
+    overflow-wrap: break-word;
+    hyphens: manual;
+}
+
+.msg-left{
+    background-color: brown;
+    float: left;
+}
+
+.msg-right{
+    background-color: orange;
+    float: right;
+}
