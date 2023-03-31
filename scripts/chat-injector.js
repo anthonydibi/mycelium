@@ -6,26 +6,6 @@ if(window.MYCLM_HASRUN_FMQJR === true){ //strict equality, bc there could be a D
 }
 window.MYCLM_HASRUN_FMQJR = true;
 
-const addOwnMessage = (msg) => {
-    let message = document.createElement('div');
-    message.classList.add('msg');
-    message.classList.add('msg-right');
-    message.innerText = msg;
-    let frame = document.querySelector("#mycelium-iframe");
-    console.log(frame);
-    console.log(frame.contentWindow.document.body);
-    chatMessages.appendChild(message);
-}
-
-const addMessage = (msg) => {
-    let message = document.createElement('div');
-    message.classList.add('msg');
-    message.classList.add('msg-left');
-    message.innerText = msg;
-    let chatMessages = document.querySelector("#mycelium-messages");
-    chatMessages.appendChild(message);
-}
-
 //injectee page might have its own CSS/JS that clashes with injected html, so wrap in an iframe
 let iframe = document.createElement('iframe');
 iframe.src = chrome.runtime.getURL('content/chat.html');
